@@ -51,12 +51,14 @@ def is_word_guessed(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     pass
-
-
+    for letter in secret_word:
+        if letter not in letters_guessed:
+            return False
+    return True
 ### Testcases
-# print(is_word_guessed('apple', ['a', 'e', 'i', 'k', 'p', 'r', 's']))
-# print(is_word_guessed('durian', ['h', 'a', 'c', 'd', 'i', 'm', 'n', 'r', 't', 'u']))
-# print(is_word_guessed('pineapple', []))
+print(is_word_guessed('apple', ['a', 'e', 'i', 'k', 'p', 'r', 's']))
+print(is_word_guessed('durian', ['h', 'a', 'c', 'd', 'i', 'm', 'n', 'r', 't', 'u']))
+print(is_word_guessed('pineapple', []))
 
 
 
