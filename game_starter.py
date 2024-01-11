@@ -50,7 +50,12 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    pass
+    #Pseodo code:
+    # for every letter in secret_word()
+    #   If not the same from the list, then show False
+      
+    # All letter guessed correctly, so return True
+  
     for letter in secret_word:
         if letter not in letters_guessed:
             return False
@@ -71,13 +76,22 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     pass
-    
-    
-    
-      
+    #Pseodo Code:
+      # Initialize an empty string to store the result
+      # Iterate over each letter in secret_word
+      #    If the letter is in letters_guessed, append it to guessed_word
+      #        If the letter is not guessed, append an underscore
+    guessed_word = ""
+    for letter in secret_word:
+        if letter in letters_guessed:
+            guessed_word += letter
+        else:
+            guessed_word += "_"
+
+    return guessed_word
 #Testcases
-# print(get_guessed_word('apple', ['e', 'i', 'k', 'p', 'r', 's']))
-# print(get_guessed_word('durian', ['a', 'c', 'd', 'h', 'i', 'm', 'n', 'r', 't', 'u']))
+print(get_guessed_word('apple', ['e', 'i', 'k', 'p', 'r', 's']))
+print(get_guessed_word('durian', ['a', 'c', 'd', 'h', 'i', 'm', 'n', 'r', 't', 'u']))
 
 def get_available_letters(letters_guessed):
     '''
@@ -87,11 +101,17 @@ def get_available_letters(letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...   
     pass
-
-
+    # Pseodo Code:
+        # Create a string containing all lowercase letters
+        # Iterate over each letter in letters_guessed
+        # Remove the guessed letter from all_letters
+    all_letters = 'abcdefghijklmnopqrstuvwxyz'
+    for letter in letters_guessed:
+        all_letters = all_letters.replace(letter, '')
+    return all_letters
 
 #Testcases 
-# print( get_available_letters(['e', 'i', 'k', 'p', 'r', 's']) )
+print( get_available_letters(['e', 'i', 'k', 'p', 'r', 's']) )
   
 def game_loop(secret_word):
     '''
@@ -115,8 +135,52 @@ def game_loop(secret_word):
     '''
     # FILL IN YOUR CODE HERE...
     pass
+# Pseodo Code:
+    # Set the maximum number of guesses
+    # Initialize guessed letters list
+    # Print the initial message
+    # Display the remaining number of guesses
+    # Display the available letters
+    # Ask the user for a guess
+    # Check if the guess is a valid letter
+    # Check if the letter has already been guessed
+    # Add the guess to the list of guessed letters
+     # Check if the guess is in the secret word
+      # Check if the word is guessed
+       # If the player runs out of guesses
+       # Example usage
+# Replace 'example' with the actual secret word you want the player to guess
+    max_guesses = 8
+    letters_guessed = []
+    print("Welcome to the word_guessed Game!")
+    print("I am thinking of a word that is", len(secret_word), "letters long.")
+    print("-------------")
+    while max_guesses > 0:
+        print("You have", max_guesses, "guesses left.")
+        available_letters = get_available_letters(letters_guessed)
+        print("Available letters:", available_letters)
+        guess = input("Please guess a letter: ").lower()
+        if not guess.isalpha() or len(guess) != 1:
+            print("Invalid input. Please enter a single letter.")
+            continue
+        if guess in letters_guessed:
+            print("Incorrect! You've already guessed that letter:", get_guessed_word(secret_word, letters_guessed))
+            continue
+        letters_guessed.append(guess)
 
-
+       
+        if guess in secret_word:
+            print("Correct:", get_guessed_word(secret_word, letters_guessed))
+        else:
+            print("Incorrect! That letter is not part of the word:", get_guessed_word(secret_word, letters_guessed))
+            max_guesses -= 1
+        print("-------------")
+        if is_word_guessed(secret_word, letters_guessed):
+            print("Congratulations! You Win!:", secret_word)
+            break
+    if max_guesses == 0:
+        print("Sorry, you ran out of guesses. The word was:", secret_word)
+game_loop('example')
 
 
 def main():
