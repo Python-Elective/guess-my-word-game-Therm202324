@@ -37,6 +37,7 @@ def choose_word(word_list):
 
 # end of helper code
 # -----------------------------------
+print("-------------")
 
 # Load the list of words into the variable word_list
 # so that it can be accessed from anywhere in the program
@@ -70,6 +71,7 @@ print(is_word_guessed ('lettuce', ['k', 'v', 'a', 'e', 'n', 'd', 'b', 'f', 'u', 
 print(is_word_guessed ('pineapple', []))
 print(is_word_guessed ('mangosteen', ['z', 'x', 'q', 'm', 'a', 'n', 'g', 'o', 's', 't', 'e', 'e', 'n']))
 # -----------------------------------
+print("-------------")
 
 def get_guessed_word(secret_word, letters_guessed):
     '''
@@ -100,6 +102,7 @@ print(get_guessed_word ('coconut', ['w', 'l', 'i', 'p', 'c', 'u', 'j', 'h', 'v',
 print(get_guessed_word ('banana', []))
 print(get_guessed_word ('broccoli', ['e', 'c', 'g', 'u', 'r', 'x', 's', 'a', 'p', 'j']))
 # -----------------------------------
+print("-------------")
 
 def get_available_letters(letters_guessed):
     '''
