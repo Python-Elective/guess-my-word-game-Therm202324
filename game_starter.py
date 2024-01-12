@@ -37,10 +37,10 @@ def choose_word(word_list):
 
 # end of helper code
 # -----------------------------------
-print("-------------")
+print("---PAR 1-------")
 
-# Load the list of words into the variable word_list
-# so that it can be accessed from anywhere in the program
+# # Load the list of words into the variable word_list
+# # so that it can be accessed from anywhere in the program
 word_list = load_words()
 
 def is_word_guessed(secret_word, letters_guessed):
@@ -51,18 +51,18 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    pass
+    # pass
         #Pseodo code:
         # for every letter in secret_word()
         #   If not the same from the list, then show False
       
-    # All letter guessed correctly, so return True
+     # All letter guessed correctly, so return True
   
     for letter in secret_word:
         if letter not in letters_guessed:
             return False
     return True
-### Testcases
+# ### Testcases
 print(is_word_guessed('apple', ['a', 'e', 'i', 'k', 'p', 'r', 's']))
 print(is_word_guessed('durian', ['h', 'a', 'c', 'd', 'i', 'm', 'n', 'r', 't', 'u']))
 print(is_word_guessed('pineapple', []))
@@ -71,7 +71,8 @@ print(is_word_guessed ('lettuce', ['k', 'v', 'a', 'e', 'n', 'd', 'b', 'f', 'u', 
 print(is_word_guessed ('pineapple', []))
 print(is_word_guessed ('mangosteen', ['z', 'x', 'q', 'm', 'a', 'n', 'g', 'o', 's', 't', 'e', 'e', 'n']))
 # -----------------------------------
-print("-------------")
+
+print("----PAR 2------")
 
 def get_guessed_word(secret_word, letters_guessed):
     '''
@@ -81,7 +82,7 @@ def get_guessed_word(secret_word, letters_guessed):
       what letters in secret_word have been guessed so far.
     '''
     # FILL IN YOUR CODE HERE...
-    pass
+    # pass
         #Pseodo Code:
         # Initialize an empty string to store the result
         # Iterate over each letter in secret_word
@@ -92,7 +93,7 @@ def get_guessed_word(secret_word, letters_guessed):
         if letter in letters_guessed:
             guessed_word += letter
         else:
-            guessed_word += "_"
+            guessed_word += "_ "
     return guessed_word
 #Testcases
 print(get_guessed_word('apple', ['e', 'i', 'k', 'p', 'r', 's']))
@@ -102,8 +103,7 @@ print(get_guessed_word ('coconut', ['w', 'l', 'i', 'p', 'c', 'u', 'j', 'h', 'v',
 print(get_guessed_word ('banana', []))
 print(get_guessed_word ('broccoli', ['e', 'c', 'g', 'u', 'r', 'x', 's', 'a', 'p', 'j']))
 # -----------------------------------
-print("-------------")
-
+print("----PAR 3------")
 def get_available_letters(letters_guessed):
     '''
     letters_guessed: list, what letters have been guessed so far
@@ -198,6 +198,7 @@ def game_loop(secret_word):
     if max_guesses == 0:
         print("Sorry, you ran out of guesses. The word was:", secret_word)
 game_loop('example')
+
 print("-------------")
 
 def main():
