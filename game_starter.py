@@ -65,8 +65,11 @@ def is_word_guessed(secret_word, letters_guessed):
 print(is_word_guessed('apple', ['a', 'e', 'i', 'k', 'p', 'r', 's']))
 print(is_word_guessed('durian', ['h', 'a', 'c', 'd', 'i', 'm', 'n', 'r', 't', 'u']))
 print(is_word_guessed('pineapple', []))
-
-
+print(is_word_guessed ('carrot', ['b', 'g', 'd', 'z', 'w', 'y', 'v', 'm', 'i', 'k']))
+print(is_word_guessed ('lettuce', ['k', 'v', 'a', 'e', 'n', 'd', 'b', 'f', 'u', 'c']))
+print(is_word_guessed ('pineapple', []))
+print(is_word_guessed ('mangosteen', ['z', 'x', 'q', 'm', 'a', 'n', 'g', 'o', 's', 't', 'e', 'e', 'n']))
+# -----------------------------------
 
 def get_guessed_word(secret_word, letters_guessed):
     '''
@@ -92,6 +95,11 @@ def get_guessed_word(secret_word, letters_guessed):
 #Testcases
 print(get_guessed_word('apple', ['e', 'i', 'k', 'p', 'r', 's']))
 print(get_guessed_word('durian', ['a', 'c', 'd', 'h', 'i', 'm', 'n', 'r', 't', 'u']))
+print(get_guessed_word ('grapefruit', ['k', 'm', 'b', 'j', 'e', 'w', 's', 'z', 'u', 'x']))
+print(get_guessed_word ('coconut', ['w', 'l', 'i', 'p', 'c', 'u', 'j', 'h', 'v', 'z']))
+print(get_guessed_word ('banana', []))
+print(get_guessed_word ('broccoli', ['e', 'c', 'g', 'u', 'r', 'x', 's', 'a', 'p', 'j']))
+# -----------------------------------
 
 def get_available_letters(letters_guessed):
     '''
@@ -112,6 +120,13 @@ def get_available_letters(letters_guessed):
 
 #Testcases 
 print( get_available_letters(['e', 'i', 'k', 'p', 'r', 's']) )
+print( get_available_letters(['abcdfghjlmnoqtuvwxyz']))
+print( get_available_letters([]))
+print( get_available_letters(['r', 'y', 'd', 'u', 't']))
+print( get_available_letters(['t', 'w', 'v', 'b', 'k', 'n']))
+print( get_available_letters(['a']))
+print( get_available_letters(['p', 'r', 'f', 'd', 'k', 'h', 'c', 'a', 'i', 'y', 'w', 'b']))
+# -----------------------------------
   
 def game_loop(secret_word):
     '''
