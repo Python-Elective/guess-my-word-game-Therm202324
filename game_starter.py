@@ -50,9 +50,10 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    #Pseodo code:
-    # for every letter in secret_word()
-    #   If not the same from the list, then show False
+    pass
+        #Pseodo code:
+        # for every letter in secret_word()
+        #   If not the same from the list, then show False
       
     # All letter guessed correctly, so return True
   
@@ -76,18 +77,17 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...
     pass
-    #Pseodo Code:
-      # Initialize an empty string to store the result
-      # Iterate over each letter in secret_word
-      #    If the letter is in letters_guessed, append it to guessed_word
-      #        If the letter is not guessed, append an underscore
+        #Pseodo Code:
+        # Initialize an empty string to store the result
+        # Iterate over each letter in secret_word
+        #    If the letter is in letters_guessed, append it to guessed_word
+        #        If the letter is not guessed, append an underscore
     guessed_word = ""
     for letter in secret_word:
         if letter in letters_guessed:
             guessed_word += letter
         else:
             guessed_word += "_"
-
     return guessed_word
 #Testcases
 print(get_guessed_word('apple', ['e', 'i', 'k', 'p', 'r', 's']))
@@ -101,10 +101,10 @@ def get_available_letters(letters_guessed):
     '''
     # FILL IN YOUR CODE HERE...   
     pass
-    # Pseodo Code:
-        # Create a string containing all lowercase letters
-        # Iterate over each letter in letters_guessed
-        # Remove the guessed letter from all_letters
+        # Pseodo Code:
+            # Create a string containing all lowercase letters
+            # Iterate over each letter in letters_guessed
+            # Remove the guessed letter from all_letters
     all_letters = 'abcdefghijklmnopqrstuvwxyz'
     for letter in letters_guessed:
         all_letters = all_letters.replace(letter, '')
@@ -135,21 +135,21 @@ def game_loop(secret_word):
     '''
     # FILL IN YOUR CODE HERE...
     pass
-# Pseodo Code:
-    # Set the maximum number of guesses
-    # Initialize guessed letters list
-    # Print the initial message
-    # Display the remaining number of guesses
-    # Display the available letters
-    # Ask the user for a guess
-    # Check if the guess is a valid letter
-    # Check if the letter has already been guessed
-    # Add the guess to the list of guessed letters
-     # Check if the guess is in the secret word
-      # Check if the word is guessed
-       # If the player runs out of guesses
-       # Example usage
-# Replace 'example' with the actual secret word you want the player to guess
+        # Pseodo Code:
+            # Set the maximum number of guesses
+            # Initialize guessed letters list
+            # Print the initial message
+            # Display the remaining number of guesses
+            # Display the available letters
+            # Ask the user for a guess
+            # Check if the guess is a valid letter
+            # Check if the letter has already been guessed
+            # Add the guess to the list of guessed letters
+            # Check if the guess is in the secret word
+            # Check if the word is guessed
+            # If the player runs out of guesses
+            # Example usage
+            # Replace 'example' with the actual secret word you want the player to guess
     max_guesses = 8
     letters_guessed = []
     print("Welcome to the word_guessed Game!")
