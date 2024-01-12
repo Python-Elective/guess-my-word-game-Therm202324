@@ -185,8 +185,6 @@ def game_loop(secret_word):
             print("Incorrect! You've already guessed that letter:", get_guessed_word(secret_word, letters_guessed))
             continue
         letters_guessed.append(guess)
-
-       
         if guess in secret_word:
             print("Correct:", get_guessed_word(secret_word, letters_guessed))
         else:
