@@ -197,7 +197,7 @@ def game_loop(secret_word):
     if max_guesses == 0:
         print("Sorry, you ran out of guesses. The word was:", secret_word)
 game_loop('example')
-
+print("-------------")
 
 def main():
     secret_word = choose_word(word_list)
