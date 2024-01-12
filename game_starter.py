@@ -130,7 +130,8 @@ print( get_available_letters(['t', 'w', 'v', 'b', 'k', 'n']))
 print( get_available_letters(['a']))
 print( get_available_letters(['p', 'r', 'f', 'd', 'k', 'h', 'c', 'a', 'i', 'y', 'w', 'b']))
 # -----------------------------------
-  
+print("-------------")
+
 def game_loop(secret_word):
     '''
     secret_word: string, the secret word to guess.
