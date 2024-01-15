@@ -129,14 +129,30 @@ def get_available_letters(letters_guessed):
     #     all_letters = all_letters.replace(letter, '')
     # return all_letters
 # Option 3 :
-    alphabet = list(string.ascii_lowercase)
-    # print(alphabet)
-    for letter in alphabet:
-        if letter in letters_guessed:
-            alphabet.remove(letter)
-    return'_'.join(alphabet)
-    
-
+    # alphabet = list(string.ascii_lowercase)
+    # # print(alphabet)
+    # for letter in alphabet:
+    #     if letter in letters_guessed:
+    #         alphabet.remove(letter)
+    # return'_'.join(alphabet)
+# Option 4 :
+    # alphabet = list(string.ascii_lowercase)
+    # # print(alphabet)
+    # for letter in alphabet:
+    #     if letter in letters_guessed:
+    #         alphabet.remove(letter)
+    return'_'.join([letter 
+                    for letter in alphabet 
+                    if letter not in letters_guessed])
+# Option 5 :
+    # output_string = ' '
+    # for everyletter in alphabet
+    #  if letter is not letters_guessed
+    #   letter is still avalable 
+    #   concatenate letter onto output
+    #  otherwise
+    #   do nothing
+    # return output_string
 #Testcases 
 print( get_available_letters(['e', 'i', 'k', 'p', 'r', 's']) )
 print( get_available_letters(['abcdfghjlmnoqtuvwxyz']))
