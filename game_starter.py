@@ -161,6 +161,7 @@ print( get_available_letters(['r', 'y', 'd', 'u', 't']))
 print( get_available_letters(['t', 'w', 'v', 'b', 'k', 'n']))
 print( get_available_letters(['a']))
 print( get_available_letters(['p', 'r', 'f', 'd', 'k', 'h', 'c', 'a', 'i', 'y', 'w', 'b']))
+print( get_available_letters(['t, h, e, r, m']))
 # -----------------------------------
 print("-------------")
 
