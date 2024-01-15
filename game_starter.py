@@ -118,10 +118,10 @@ def get_available_letters(letters_guessed):
             # Remove the guessed letter from all_letters
     import string
 # Option 1 :
-    alphabet = string.ascii_lowercase
-    for letter in letters_guessed:
-        alphabet = alphabet .replace(letter,'')
-    return alphabet
+    # alphabet = string.ascii_lowercase
+    # for letter in letters_guessed:
+    #     alphabet = alphabet .replace(letter,'')
+    # return alphabet
 # Option 2/ My own version:
     # all_letters = 'abcdefghijklmnopqrstuvwxyz'
     # for letter in letters_guessed:
@@ -140,9 +140,10 @@ def get_available_letters(letters_guessed):
     # for letter in alphabet:
     #     if letter in letters_guessed:
     #         alphabet.remove(letter)
-    return'_'.join([letter 
-                    for letter in string.ascii_lowercase
-                    if letter not in letters_guessed])
+    
+    # return'_'.join([letter 
+    #                 for letter in string.ascii_lowercase
+    #                 if letter not in letters_guessed])
 # Option 5 :
     # output_string = ' '
     # for everyletter in alphabet
@@ -152,6 +153,17 @@ def get_available_letters(letters_guessed):
     #  otherwise
     #   do nothing
     # return output_string
+    alphabet = string.ascii_lowercase
+    output_string = ''
+    
+    for letter in alphabet:
+        if letter not in letters_guessed:
+            output_string += letter
+        else:
+            # Do nothing if the letter has been guessed
+            pass
+    
+    return output_string
 #Testcases 
 print( get_available_letters(['e', 'i', 'k', 'p', 'r', 's']) )
 print( get_available_letters(['abcdfghjlmnoqtuvwxyz']))
