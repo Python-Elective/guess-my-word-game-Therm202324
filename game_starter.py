@@ -174,7 +174,8 @@ print( get_available_letters(['a']))
 print( get_available_letters(['p', 'r', 'f', 'd', 'k', 'h', 'c', 'a', 'i', 'y', 'w', 'b']))
 print( get_available_letters(['t, h, e, r, m']))
 # -----------------------------------
-print("-------------")
+
+print("-----PAR 4------")
 
 def game_loop(secret_word):
     '''
