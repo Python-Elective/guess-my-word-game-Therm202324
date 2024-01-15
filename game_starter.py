@@ -116,10 +116,26 @@ def get_available_letters(letters_guessed):
             # Create a string containing all lowercase letters
             # Iterate over each letter in letters_guessed
             # Remove the guessed letter from all_letters
-    all_letters = 'abcdefghijklmnopqrstuvwxyz'
-    for letter in letters_guessed:
-        all_letters = all_letters.replace(letter, '')
-    return all_letters
+    import string
+# Option 1 :
+    # alphabet = string.ascii_lowercase
+    
+    # for letter in letters_guessed:
+    #     alphabet = alphabet .replace(letter,'')
+    # return alphabet
+# Option 2/ My own version:
+    # all_letters = 'abcdefghijklmnopqrstuvwxyz'
+    # for letter in letters_guessed:
+    #     all_letters = all_letters.replace(letter, '')
+    # return all_letters
+# Option 3 :
+    alphabet = list(string.ascii_lowercase)
+    # print(alphabet)
+    for letter in alphabet:
+        if letter in letters_guessed:
+            alphabet.remove(letter)
+    return'_'.join(alphabet)
+    
 
 #Testcases 
 print( get_available_letters(['e', 'i', 'k', 'p', 'r', 's']) )
