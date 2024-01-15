@@ -159,9 +159,9 @@ def get_available_letters(letters_guessed):
     for letter in alphabet:
         if letter not in letters_guessed:
             output_string += letter
-        else:
-            # Do nothing if the letter has been guessed
-            pass
+        # else:
+        #     # Do nothing if the letter has been guessed
+        #     pass
     
     return output_string
 #Testcases 
