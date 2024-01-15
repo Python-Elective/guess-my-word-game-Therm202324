@@ -123,17 +123,17 @@ def get_available_letters(letters_guessed):
         alphabet = alphabet .replace(letter,'')
     return alphabet
 # Option 2/ My own version:
-    all_letters = 'abcdefghijklmnopqrstuvwxyz'
-    for letter in letters_guessed:
-        all_letters = all_letters.replace(letter, '')
-    return all_letters
+    # all_letters = 'abcdefghijklmnopqrstuvwxyz'
+    # for letter in letters_guessed:
+    #     all_letters = all_letters.replace(letter, '')
+    # return all_letters
 # Option 3 :
     # alphabet = list(string.ascii_lowercase)
     # print(alphabet)
-    for letter in alphabet:
-        if letter in letters_guessed:
-            alphabet.remove(letter)
-    return'_'.join(alphabet)
+    # for letter in alphabet:
+    #     if letter in letters_guessed:
+    #         alphabet.remove(letter)
+    # return'_'.join(alphabet)
 # Option 4 :
     # alphabet = list(string.ascii_lowercase)
     # # print(alphabet)
