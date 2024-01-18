@@ -199,6 +199,18 @@ def game_loop(secret_word):
     '''
     # FILL IN YOUR CODE HERE...
     pass
+    # 
+    #     while True:
+    # # while player != DEAD or points > or......
+    #     if player == DEAD  
+    #     You diiieeeeeeeee
+    #     break #game over
+    #     if points == 0
+    #     You diiieeeeeeeee
+    #     break #game over
+    #     if guessed_word == True
+    #     You Win  
+    #     loop 
         # Pseodo Code:
             # Set the maximum number of guesses
             # Initialize guessed letters list
@@ -242,8 +254,9 @@ def game_loop(secret_word):
             break
     if max_guesses == 0:
         print("Sorry, you ran out of guesses. The word was:", secret_word)
-game_loop('example')
-
+game_loop #('therm') 
+game_loop(secret_word)
+    
 print("-------------")
 
 def main():
