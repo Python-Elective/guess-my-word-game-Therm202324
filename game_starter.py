@@ -254,8 +254,8 @@ def game_loop(secret_word):
             break
     if max_guesses == 0:
         print("Sorry, you ran out of guesses. The word was:", secret_word)
-game_loop #('therm') 
-game_loop(secret_word)
+# game_loop #('therm') 
+# game_loop(secret_word)
     
 print("-------------")
 
