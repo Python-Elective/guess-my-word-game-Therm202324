@@ -214,7 +214,7 @@ def game_loop(secret_word):
     letters_guessed = []
     print("Reading word_list file...")
     print('55900 words found')
-    mistakes_made = 8
+    mistakes_made = 0
     print()
     
     print("Let the game begin!")
@@ -231,8 +231,8 @@ def game_loop(secret_word):
             print(f'Correct: {get_guessed_word(secret_word, letters_guessed)}')
         else:
             print(f'Incorrect, this letter is not in my word: {get_guessed_word(secret_word, letters_guessed)}')
-            letters_guessed.append(guess)
-            mistakes_made += 1 
+            mistakes_made += 1
+            letters_guessed.append(guess) 
         
         print()
         
