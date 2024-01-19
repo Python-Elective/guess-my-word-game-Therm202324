@@ -211,6 +211,28 @@ def game_loop(secret_word):
     #     if guessed_word == True
     #     You Win  
     #     loop 
+    letters_guessed = []
+    print("Reading word_list file...")
+    print('55900 words found')
+    mistakes_made = 0
+    
+    print("Let the game begin!")
+    print(f"I am thinking of a word with{len(secret_word)}" )
+    
+    while True:
+        print(f'You have {8-mistakes_made} guessed remaining')
+        print(f"letters available to you: {get_available_letters(letters_guessed)}")
+        guess = input('Guess a letter: ')
+        if guess in letters_guessed:
+            print("You fool! You tried this letter already:", get_guessed_word(secret_word, letters_guessed))
+        elif guess in secret_word:
+            letters_guessed.append(guess)
+            print(f'Correct: {get_guessed_word(secret_word, letters_guessed)}')
+        else:
+            print(f'Incorrect, this letter is not in my word: {get_guessed_word(secret_word, letters_guessed)}')
+            mistakes_made += 1 
+        
+        print()
         # Pseodo Code:
             # Set the maximum number of guesses
             # Initialize guessed letters list
@@ -226,32 +248,32 @@ def game_loop(secret_word):
             # If the player runs out of guesses
             # Example usage
             # Replace 'example' with the actual secret word you want the player to guess
-    max_guesses = 8
-    letters_guessed = []
-    print("Reading word_list file...")
-    print('55900 words found')
-    print("I am thinking of a word with", len(secret_word), "letters.")
-    print("-------------")
-    while max_guesses > 0:
-        print("You have", max_guesses, "guesses remaining.")
-        available_letters = get_available_letters(letters_guessed)
-        print("Letters available to you:", available_letters)
-        guess = input("Guess a letter: ")
-        if guess in letters_guessed:
-            print("You fool! You tried this letter already:", get_guessed_word(secret_word, letters_guessed))
-            continue
-        letters_guessed.append(guess)
-        if guess in secret_word:
-            print("Correct:", get_guessed_word(secret_word, letters_guessed))
-        else:
-            print("Incorrect, this letter is not in my word:", get_guessed_word(secret_word, letters_guessed))
-            max_guesses -= 1
-        print("-------------")
-        if is_word_guessed(secret_word, letters_guessed):
-            print("You WIN")
-            break
-    if max_guesses == 0:
-        print("Sorry, you ran out of guesses. The word was:", secret_word)
+    # max_guesses = 8
+    # letters_guessed = []
+    # print("Reading word_list file...")
+    # print('55900 words found')
+    # print("I am thinking of a word with", len(secret_word), "letters.")
+    # print("-------------")
+    # while max_guesses > 0:
+    #     print("You have", max_guesses, "guesses remaining.")
+    #     available_letters = get_available_letters(letters_guessed)
+    #     print("Letters available to you:", available_letters)
+    #     guess = input("Guess a letter: ")
+    #     if guess in letters_guessed:
+    #         print("You fool! You tried this letter already:", get_guessed_word(secret_word, letters_guessed))
+    #         continue
+    #     letters_guessed.append(guess)
+    #     if guess in secret_word:
+    #         print("Correct:", get_guessed_word(secret_word, letters_guessed))
+    #     else:
+    #         print("Incorrect, this letter is not in my word:", get_guessed_word(secret_word, letters_guessed))
+    #         max_guesses -= 1
+    #     print("-------------")
+    #     if is_word_guessed(secret_word, letters_guessed):
+    #         print("You WIN")
+    #         break
+    # if max_guesses == 0:
+    #     print("Sorry, you ran out of guesses. The word was:", secret_word)
 # game_loop #('therm') 
 # game_loop(secret_word)
     
