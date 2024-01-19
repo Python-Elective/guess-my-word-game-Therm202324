@@ -230,7 +230,7 @@ def game_loop(secret_word):
     letters_guessed = []
     print("Reading word_list file...")
     print('55900 words found')
-    print("I am thinking of a word that is", len(secret_word), "letters long.")
+    print("I am thinking of a word with", len(secret_word), "letters.")
     print("-------------")
     while max_guesses > 0:
         print("You have", max_guesses, "guesses remaining.")
